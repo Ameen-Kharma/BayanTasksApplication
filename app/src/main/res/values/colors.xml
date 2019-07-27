@@ -7,5 +7,16 @@
     <color name="colorGray">#777</color>
     <color name="colorSoftBlue">#4df</color>
 
+    <color name="backgroundcell">#f8f8f8</color>
+    <color name="senderNameColor">#296b98</color>
+
+
+    <color name="subjectColor">#2f2f2f</color>
+    <color name="brifColor">#aaaaaa</color>
+    <color name="bottomSheetTextColr">#3792d0</color>
+
+    <color name="deleteButtomSheetColor">#b00016</color>
+    <color name="searchEditTextColor">#3d8e8e93</color>
+
 
 </resources>

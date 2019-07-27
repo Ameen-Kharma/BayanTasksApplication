@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="User Name"
-        />
+        android:text="zxc" />
 
     <EditText
         android:id="@+id/user_email_register_edit_text"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:hint="User Email"
         android:inputType="textWebEmailAddress"
-        />
+        android:text="zxc@mail.com" />
 
     <EditText
         android:id="@+id/password_register_edit_text"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        />
+        android:text="123456" />
 
     <EditText
         android:id="@+id/password_confirm_register_edit_text"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:hint="Confirm Password"
         android:inputType="textPassword"
-        />
+        android:text="123456" />
 
     <Button
         android:id="@+id/regestration_button"
