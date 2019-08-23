@@ -5,5 +5,5 @@ package com.tasks.android.bayantasksapplication;
  */
 
 public class Constatnts {
- public static String Base_URL = "192.168.1.17:80/api/v1/";
+ public static String Base_URL = "http://192.168.1.17:80/api/v1/";
 }

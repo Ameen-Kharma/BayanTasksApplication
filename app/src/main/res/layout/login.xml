@@ -15,6 +15,7 @@
         android:layout_marginRight="12dp"
         android:layout_marginTop="60dp"
         android:hint="Email"
+        android:text="ameen@post_tes26t.com"
         android:inputType="textWebEmailAddress"
         android:textSize="16sp" />
 
@@ -28,6 +29,7 @@
         android:layout_marginRight="12dp"
         android:layout_marginTop="60dp"
         android:hint="Password"
+        android:text="123456"
         android:inputType="textPassword"
         android:textSize="16sp" />
 

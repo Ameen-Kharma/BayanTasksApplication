@@ -19,8 +19,8 @@ import retrofit2.http.Query;
 
 public interface APIInterface {
 
-    String loginUrl = "api/v1/login";
-    String registrationUrl =  "api/v1/register";
+    String loginUrl = "login";
+    String registrationUrl =  "register";
     String threadsURL = "api/v1/inbox/threads";
     String deleteThreadURL = "api/v1/inbox/threads/delete";
     String markThreadStarURL = "api/v1/inbox/threads/threads_starring";

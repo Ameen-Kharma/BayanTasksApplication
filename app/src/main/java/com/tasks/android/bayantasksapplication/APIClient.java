@@ -39,7 +39,7 @@ public class APIClient {
         });
         client = httpClient.build();
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://patient-api-dev.medsolace.com/")
+                .baseUrl(API_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
