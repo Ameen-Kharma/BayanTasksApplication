@@ -9,13 +9,15 @@ import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import com.tasks.android.bayantasksapplication.Constatnts;
+
 /**
  * Created by Ameen_Kharma on 7/20/2019.
  */
 
 
 public class APIClient {
-    public static  String API_BASE_URL = "http://patient-api-dev.medsolace.com/api/v1/";
+    public static  String API_BASE_URL = Constatnts.Base_URL;
     private static Retrofit retrofit = null;
     public String sessionID;
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
