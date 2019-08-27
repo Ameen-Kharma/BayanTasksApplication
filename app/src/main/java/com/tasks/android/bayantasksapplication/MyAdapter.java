@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import Models.Task;
+
 /**
  * Created by Ameen_Kharma on 7/27/2019.
  */
@@ -22,6 +24,13 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         this.adapterTasks = tasks;
     }
 
+    public List<Task> getAdapterTasks() {
+        return adapterTasks;
+    }
+
+    public void setAdapterTasks(List<Task> adapterTasks) {
+        this.adapterTasks = adapterTasks;
+    }
 
     public class ItemsViewHolder extends RecyclerView.ViewHolder {
         public TextView taskTitle,descripton,taskDate,status;
@@ -38,7 +47,6 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
     }
 
     @Override

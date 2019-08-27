@@ -2,17 +2,10 @@ package Controller;
 
 import android.util.Log;
 
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.tasks.android.bayantasksapplication.APIInterface;
 import com.tasks.android.bayantasksapplication.UserInfo;
 import com.tasks.android.bayantasksapplication.RetrofitAPIClient;
 
-import okhttp3.Headers;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 
 /**

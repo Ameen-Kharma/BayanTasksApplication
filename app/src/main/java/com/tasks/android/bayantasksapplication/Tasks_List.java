@@ -8,18 +8,22 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Tasks_List extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener {
+import Controller.TasksCall;
+import Models.Task;
+import Models.TaskData;
+
+public class Tasks_List extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener, TasksCall.TaskCallBackListner {
 
     private View v;
     RecyclerView recyclerView;
     RecyclerView.LayoutManager recyclerViewLayoutManager;
-    private List<Task> tasks;
+    private Tasks tasks;
+    private List<Task> tasksList;
     private   MyAdapter myAdapter;
     private String sessionKey;
     private SwipeRefreshLayout mSwipeRefreshLayout;
@@ -40,15 +44,10 @@ public class Tasks_List extends AppCompatActivity implements SwipeRefreshLayout.
 
             mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.pull_to_refresh);
             mSwipeRefreshLayout.setOnRefreshListener(this);
-            tasks = new ArrayList<Task>();
-            for (int i=0;i<10;i++)
-            {
-                Task task = new Task();
-                task.title = "task_title"+i;
-                tasks.add(task);
-
-            }
-            myAdapter = new MyAdapter(tasks);
+            TasksCall tasksCall = new TasksCall(sessionKey="", Tasks_List.this);
+            tasks = tasksCall.getTasks(31);
+            tasksList = new ArrayList<Task>();
+            myAdapter = new MyAdapter(tasksList);
             recyclerView.setAdapter(myAdapter);
     }
 
@@ -56,5 +55,13 @@ public class Tasks_List extends AppCompatActivity implements SwipeRefreshLayout.
     public void onRefresh() {
         Toast.makeText(this,"Refrishing...", Toast.LENGTH_SHORT).show();
 
+    }
+
+    @Override
+    public void onFetchComplete(Tasks task) {
+        List<TaskData> data = task.getData();
+        tasksList = data.get(0).getTasks();
+        myAdapter.setAdapterTasks(tasksList);
+        myAdapter.notifyDataSetChanged();
     }
 }
