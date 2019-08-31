@@ -11,10 +11,10 @@ public class Task {
 
     @SerializedName("id")
     @Expose
-    int id;
-    @SerializedName("title")
+    private int id;
+    @SerializedName("tittle")
     @Expose
-    private String title;
+    private String tittle;
     @SerializedName("status")
     @Expose
     private String status;
@@ -49,12 +49,12 @@ public class Task {
         this.status = status;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTittle() {
+        return tittle;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTittle(String tittle) {
+        this.tittle = tittle;
     }
 
     public String getTarget() {

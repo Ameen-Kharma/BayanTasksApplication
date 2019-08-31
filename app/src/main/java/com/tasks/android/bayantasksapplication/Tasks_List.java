@@ -59,9 +59,15 @@ public class Tasks_List extends AppCompatActivity implements SwipeRefreshLayout.
 
     @Override
     public void onFetchComplete(Tasks task) {
-        List<TaskData> data = task.getData();
-        tasksList = data.get(0).getTasks();
-        myAdapter.setAdapterTasks(tasksList);
-        myAdapter.notifyDataSetChanged();
+
+        if(task.getStatusCode()==200){
+            tasksList = task.getData();
+            myAdapter.setAdapterTasks(tasksList);
+            myAdapter.notifyDataSetChanged();
+        }
+
+//        tasksList = data.get(0).getTasks();
+//        myAdapter.setAdapterTasks(tasksList);
+//        myAdapter.notifyDataSetChanged();
     }
 }

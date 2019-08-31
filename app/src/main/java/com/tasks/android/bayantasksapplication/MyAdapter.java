@@ -16,7 +16,7 @@ import Models.Task;
  * Created by Ameen_Kharma on 7/27/2019.
  */
 
-public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemsViewHolder> {
     private View v;
     List<Task> adapterTasks;
 
@@ -37,17 +37,21 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         public ImageView star,senderImage,attatchment;
         public ItemsViewHolder(View itemView) {
             super(itemView);
+            taskTitle = itemView.findViewById(R.id.task_title);
         }
     }
         @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyAdapter.ItemsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             v = LayoutInflater.from(parent.getContext()).inflate(R.layout.task_cell, parent, false);
             return new ItemsViewHolder(v);    }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ItemsViewHolder holder, int position) {
+        holder.taskTitle.setText(adapterTasks.get(position).getTittle());
     }
+
+
 
     @Override
     public int getItemCount() {

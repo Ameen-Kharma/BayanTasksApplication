@@ -8,14 +8,16 @@ import java.util.List;
 
 public class TaskData {
 
-    public List<Task> getTasks() {
-        return tasks;
+
+    private Task task = null;
+
+
+
+    public Task getTask() {
+        return task;
     }
 
-    public void setTasks(List<Task> tasks) {
-        this.tasks = tasks;
+    public void setTask(Task task) {
+        this.task = task;
     }
-
-    private List<Task> tasks = null;
-
 }

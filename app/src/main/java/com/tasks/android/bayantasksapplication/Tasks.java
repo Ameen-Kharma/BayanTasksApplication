@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+import Models.Task;
 import Models.TaskData;
 
 /**
@@ -20,7 +21,7 @@ public class Tasks {
     private String status;
     @SerializedName("data")
     @Expose
-    private List<TaskData> data;
+    private List<Task> data;
 
 
     public String getStatus() {
@@ -39,11 +40,11 @@ public class Tasks {
         this.statusCode = statusCode;
     }
 
-    public List<TaskData> getData() {
+    public List<Task> getData() {
         return data;
     }
 
-    public void setData(List<TaskData> data) {
+    public void setData(List<Task> data) {
         this.data = data;
     }
 }
