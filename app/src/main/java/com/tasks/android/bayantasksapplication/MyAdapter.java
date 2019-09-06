@@ -33,11 +33,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemsViewHolder> {
     }
 
     public class ItemsViewHolder extends RecyclerView.ViewHolder {
-        public TextView taskTitle,descripton,taskDate,status;
+        public TextView taskTitle,taskDescription,taskDate,taskStatus,taskFrom;
         public ImageView star,senderImage,attatchment;
         public ItemsViewHolder(View itemView) {
             super(itemView);
             taskTitle = itemView.findViewById(R.id.task_title);
+            taskDescription = itemView.findViewById(R.id.message_brief);
+            taskDate = itemView.findViewById(R.id.message_date);
+            taskStatus = itemView.findViewById(R.id.status_text);
+            taskFrom = itemView.findViewById(R.id.message_from);
         }
     }
         @NonNull
@@ -49,6 +53,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ItemsViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ItemsViewHolder holder, int position) {
         holder.taskTitle.setText(adapterTasks.get(position).getTittle());
+        holder.taskDescription.setText(adapterTasks.get(position).getDescription());
+       // holder.taskDate.setText(adapterTasks.get(position).getId());
+        holder.taskStatus.setText(adapterTasks.get(position).getStatus());
+        holder.taskFrom.setText(adapterTasks.get(position).getFrom());
     }
 
 

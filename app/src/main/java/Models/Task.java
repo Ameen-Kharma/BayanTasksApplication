@@ -15,6 +15,9 @@ public class Task {
     @SerializedName("tittle")
     @Expose
     private String tittle;
+    @SerializedName("description")
+    @Expose
+    private String description;
     @SerializedName("status")
     @Expose
     private String status;
@@ -42,7 +45,10 @@ public class Task {
     }
 
     public String getStatus() {
-        return status;
+        if(status != null)
+            return status;
+        else
+            return "Completed";
     }
 
     public void setStatus(String status) {
@@ -50,7 +56,10 @@ public class Task {
     }
 
     public String getTittle() {
-        return tittle;
+        if(tittle != null)
+           return tittle;
+        else
+            return "dummy title";
     }
 
     public void setTittle(String tittle) {
@@ -58,7 +67,10 @@ public class Task {
     }
 
     public String getTarget() {
-        return target;
+        if(target != null)
+            return target;
+        else
+            return "fuck";
     }
 
     public void setTarget(String target) {
@@ -66,10 +78,25 @@ public class Task {
     }
 
     public String getFrom() {
-        return from;
+        if(from != null)
+            return from;
+        else
+            return "Ameen";
     }
 
     public void setFrom(String from) {
         this.from = from;
     }
+
+    public String getDescription() {
+        if (description!=null)
+            return description;
+        else
+            return "baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru ! baka ya ru !";
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }
