@@ -34,5 +34,9 @@ public class AddTaskFragment extends DialogFragment {
             d.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         }
     }
+    @Override
+    public int getTheme() {
+        return R.style.DialogAnimation;
+    }
 
 }

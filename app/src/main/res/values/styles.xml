@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="DialogAnimation">
+        <item name="android:windowAnimationStyle">@style/Animation.WindowSlideUpDown</item>
+
+    </style>
+
+    <style name="Animation.WindowSlideUpDown" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/enter</item>
+        <item name="android:windowExitAnimation">@anim/exit</item>
+    </style>
 </resources>
