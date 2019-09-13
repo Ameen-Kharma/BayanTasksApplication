@@ -24,7 +24,7 @@ public class Task {
     @SerializedName("target")
     @Expose
     private String target;
-    @SerializedName("from")
+    @SerializedName("task_from")
     @Expose
     private String from;
 

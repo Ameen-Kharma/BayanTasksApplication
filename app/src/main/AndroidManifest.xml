@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tasks.android.bayantasksapplication">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistratonAndLoginActivity" />
-        <activity android:name=".Tasks_List"></activity>
+        <activity android:name=".Tasks_List" />
+        <activity android:name=".MyTaskTeamTasksActivity"></activity>
     </application>
 
 </manifest>

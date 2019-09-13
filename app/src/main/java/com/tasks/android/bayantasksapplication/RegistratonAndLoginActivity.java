@@ -150,7 +150,7 @@ public class RegistratonAndLoginActivity extends AppCompatActivity implements Re
                 dialog.dismiss();
                 sessionid = sessionKey;
                 // todo should navigate to the profile or to tasks screen ( go to tasks threads)
-                Intent intent = new Intent(this, Tasks_List.class);
+                Intent intent = new Intent(this, MyTaskTeamTasksActivity.class);
                 startActivity(intent);
             } else {
                 //Dialog error
